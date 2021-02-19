@@ -3,9 +3,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const cors = require('cors');
+
 const App = express();
 
 const Verb = require('./routes/verb');
+
+// Usar cors
+ App.use(cors());
 
 // manejar peticiones y enviar respuestas en JSON
 App.use(bodyParser.json());
